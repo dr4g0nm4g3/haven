@@ -1,0 +1,106 @@
+TODO
+
+ Created on: Mar 1, 2009
+     Author: dragon
+
+
+- combine _HCLIB_glue.h and _HCLIB_config.h?
+- implement wide char IO functions declared in _HCLIB_wstdio.h
+- organize Makefile and files for building multiple architectures and OS types
+- POSIX compliance
+
+PENDING:
+---------------------------
+functions/string/strcoll.c:/* TODO: Dummy function, PDCLib does not support locales yet. */                      
+functions/string/strxfrm.c:/* TODO: Dummy function, no locale support yet. */                                    
+functions/string/strncpy.c:    /* TODO: This works correctly, but somehow the handling of n is ugly as           
+functions/stdio/fgets.c:    /* TODO: Implement. */                                                               
+functions/stdio/freopen.c:   This implementation allows the following mode changes: TODO                         
+functions/stdio/freopen.c:    /* TODO: This function can change wide orientation of a stream */                  
+functions/stdio/freopen.c:    /* TODO: Setting mbstate */                                                        
+functions/stdio/sprintf.c:    rc = vsnprintf( s, SIZE_MAX, format, ap ); /* TODO: replace with non-checking call */
+functions/stdio/sprintf.c:    /* TODO: This test case is broken, doesn't test what it was intended to. */          
+functions/stdio/fwrite.c:    /* TODO: Add readback test. */                                                        
+functions/stdio/vprintf.c:    /* TODO: This test case is broken, doesn't test what it was intended to. */          
+functions/stdio/gets.c:    return fgets( s, INT_MAX, stdin ); /* TODO: Replace with an unchecking call. */         
+functions/stdio/rename.c:    /* TODO: Search open file list, flush and close file */                               
+functions/stdio/rename.c:/* TODO: Work around the following undef */                                               
+functions/stdio/rename.c:    /* TODO: Extend to internal testing (buffer etc.) */                                  
+functions/stdio/vsscanf.c:    /* TODO: Implement. */                                                               
+functions/stdio/fgetpos.c:    /* TODO: Implement. */                                                               
+functions/stdio/ungetc.c:    /* TODO: Implement. */                                                                
+functions/stdio/clearerr.c:    /* TODO: The above is ad-hoc and PDCLib specific. A better test driver              
+functions/stdio/rewind.c:    /* TODO: Implement. */                                                                
+functions/stdio/vsprintf.c:    return vsnprintf( str, SIZE_MAX, format, arg ); /* TODO: Replace with a non-checking call */
+functions/stdio/vsprintf.c:    /* TODO: This test case is broken, doesn't test what it was intended to. */                 
+functions/stdio/fflush.c:        /* TODO: Check what happens when fflush( NULL ) encounters write errors, in other libs */ 
+functions/stdio/puts.c:    /* TODO: Implement. */                                                                          
+functions/stdio/vsnprintf.c:    /* TODO: This function should interpret format as multibyte characters.  */                
+functions/stdio/vsnprintf.c:    /* TODO: This test case is broken, doesn't test what it was intended to. */                
+functions/stdio/setbuf.c:    /* TODO: Only allowed on a "virgin" stream; add check. */                                     
+functions/stdio/setbuf.c:    /* TODO: Extend testing once setvbuf() is finished. */                                        
+functions/stdio/perror.c:    /* TODO: Implement. */                                                                        
+functions/stdio/fseek.c:    /* TODO: Implement. */                                                                         
+functions/stdio/fopen.c:    /* Setting buffer, and mark as internal. TODO: Check for unbuffered */                         
+functions/stdio/fopen.c:    /* TODO: Setting mbstate */                                                                    
+functions/stdio/snprintf.c:    /* TODO: This test case is broken, doesn't test what it was intended to. */                 
+functions/stdio/fsetpos.c:    /* TODO: Implement. */                                                                       
+functions/stdio/ftell.c:    /* TODO: Implement. */                                                                         
+functions/stdio/fprintf.c:    /* TODO: This test case is broken, doesn't test what it was intended to. */                  
+functions/stdio/vfprintf.c:    /* TODO: This function should interpret format as multibyte characters.  */                 
+functions/stdio/vfprintf.c:    /* TODO: This test case is broken, doesn't test what it was intended to. */                 
+functions/stdio/vfscanf.c:    /* TODO: Implement using vsscanf() reading from file buffer */                               
+functions/stdio/remove.c:    /* TODO: Check open file list, flush and close file if open */                                
+functions/stdio/remove.c:/* TODO: Work around the following undef */                                                       
+functions/stdio/remove.c:    /* TODO: Extend to internal testing (buffer etc.) */                                          
+functions/stdio/setvbuf.c:    /* TODO: Honor user-provided buffer / buffer size. (Not actually required                    
+functions/stdio/setvbuf.c:    stream->status |= mode; /* TODO: Unchecked use of mode -> vulnerable. */                     
+functions/stdio/fgetc.c:    /* TODO: Implement. */                                                                         
+functions/stdlib/ldiv.c:    /* TODO: pre-C99 compilers might require modulus corrections */                                
+functions/stdlib/strtoll.c:    /* TODO: test "odd" overflow, i.e. base is not power of two */                              
+functions/stdlib/strtoll.c:    /* TODO: test "odd" overflow, i.e. base is not power of two */                              
+functions/stdlib/malloc.c:/* TODO: Primitive placeholder. Much room for improvement. */                                    
+functions/stdlib/malloc.c:          splitnode->next = NULL; /* TODO: This is bug #1514883, uncovered by testdriver yet. */ 
+functions/stdlib/realloc.c:/* TODO: Primitive placeholder. Improve. */                                                     
+functions/stdlib/exit.c:/* TODO - "except that a function is called after any previously registered                        
+functions/stdlib/exit.c:/* TODO: 32 is guaranteed. This should be dynamic but ATM gives problems                           
+functions/stdlib/_Exit.c:    /* TODO: Flush and close open streams. Remove tmpfile() files. */                             
+functions/stdlib/_Exit.c:    /* TODO: Add testdrivers after flush / close / tmpfile is implemented. */                     
+functions/stdlib/free.c:/* TODO: Primitive placeholder. Much room for improvement. */                                      
+functions/stdlib/strtol.c:    /* TODO: test "odd" overflow, i.e. base is not power of two */                               
+functions/stdlib/strtol.c:    /* TODO: test "odd" overflow, i.e. base is not power of two */
+functions/stdlib/lldiv.c:    /* TODO: pre-C99 compilers might require modulus corrections */
+functions/stdlib/div.c:    /* TODO: pre-C99 compilers might require modulus corrections */
+functions/_HCLIB/print.c:            /* TODO: Flags, wide chars. */
+functions/_HCLIB/print.c:            /* TODO: Flags, wide chars. */
+functions/_HCLIB/print.c:            /* TODO: E_long -> E_intptr */
+functions/_HCLIB/print.c:        /* TODO: Check for invalid flag combinations. */
+functions/_HCLIB/atomax.c:    /* TODO: In other than "C" locale, additional patterns may be defined     */
+functions/_HCLIB/strtox_main.c:            /* TODO: Only if endptr != NULL - but do we really want *another* parameter? */
+functions/_HCLIB/strtox_main.c:            /* TODO: This is ugly, but keeps caller from negating the error value */
+includes/string.h:   TODO: Currently a dummy wrapper for strcmp() as PDCLib does not yet support
+includes/string.h:   TODO: PDCLib does not yet support locales.
+includes/string.h:   TODO: strerror() not yet implemented.
+includes/errno.h://TODO: EDOM and ERANGE macros may need to be changed later
+includes/locale.h:// TODO: implementation
+includes/setjmp.h:// TODO: implementation
+includes/math.h:// TODO: implementation
+includes/stdlib.h:/* TODO: atof(), strtof(), strtod(), strtold() */
+includes/stdlib.h:/* TODO: Macro MB_CUR_MAX */
+includes/stdlib.h:/* TODO: Multibyte / wide character conversion functions */
+includes/limits.h:/* TODO: Defined to 1 as multibyte characters are not supported yet. */
+includes/signal.h:/* TODO: use _HCLIB_XXXX macro in place of int? */
+includes/stdio.h:   This implementation allows the following mode changes: TODO
+includes/stdio.h:   TODO: Add multibyte support to printf() functions.
+includes/stdio.h:       TODO: Clarify these statements regarding %ls.
+includes/stdio.h:/* TODO: fscanf() documentation */
+includes/stdio.h:   TODO: Add multibyte support to scanf() functions.
+includes/stdio.h:   TODO: Implementation-defined errno setting for fgetpos().
+includes/stdio.h:   TODO: Implementation-defined errno setting for fsetpos().
+includes/stdio.h:   TODO: Implementation-defined errno setting for ftell().
+includes/time.h:// TODO: implementation
+includes/time.h://TODO: define CLOCKS_PER_SEC in terms of clock_t
+Makefile:#TODO: include target to generate documentation using doxygen
+Makefile:#TODO: add targets to generate C library for different platforms
+Makefile:#TODO: make 'lib' output directory for all library files
+Makefile:#TODO: include packaging of doxygen generated documentation

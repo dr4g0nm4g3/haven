@@ -1,0 +1,33 @@
+HEX alpha kernel 0.0.x (*** See Alpha Kernel Requirements Doc ***)
+
+* - detect CPU attributes [DONE]
+*  -detect IO devices [DONE]
+* - detect RAM available [DONE]
+* - read CMOS [DONE]
+
+* - kernel heap allocation
+	- ordered array implementation [DONE]
+	- kernel heap implementation [DONE - But needs improvement. VERY primitive implementation]
+
+* - serial port logging functionality [DONE]
+	* - allow for logging to a serial port [DONE]
+
+* - set up data structures to store 
+		- memory [DONE]
+			- start and end address of memory regions
+			- size of each region
+			- size of high memory (above 1MB)
+			- size of low (conventional) memory (0 - 640KB)
+		- CPU information
+			- processor manufacturer (Intel, AMD,etc..)
+			- processor model and family (athlon, pentium, etc...)
+			- 32-bit or 64-bit
+			- processor features (FPU, Virtual mode, etc..) 
+
+* - design a set of system calls
+
+* - paging support
+
+* - place version info into the kernel binary [DONE - for now version is hard coded]
+
+* - integrate automated unit tests into the build

@@ -1,0 +1,46 @@
+ HEX alpha exokernel version 0.0.x
+
+========================================================
+About
+========================================================
+The HEX alpha kernel is a precursor to the HEX exokernel.
+This kernel's purpose is to experiment with kernel development
+to determine what are the best practices and what is required
+of the kernel to fulfill it's goal.
+
+========================================================
+Directory Structure
+========================================================
+Following the style of the linux kernel source, generic kernel
+and architecture specific code will be split into separate
+directories to allow for modularilty in compilation
+and for easy understanding of the source's function and purpose.
+The generic high-level directory structure is:
+
++ <Root Dir>
+|----+ arch					(contains architecture specific code)
+	 |----+ i386			(contains intel i386+ specific code)
+	 	  |----+ boot		(contains the boot loader code for intel 386+ srchitectures)
+		  |----+ include	(contains headers for intel specific 386+ architectures)
+		  |----+ kernel		(contains kernel code specific to the i386+ architecture)
+|----+ include				(contains headers for the kernel)
+|----+ kernel				(contains kernel code independent of the architecture)
+
+
+***this directory structure will change overtime as the kernel is developed
+
+========================================================
+Building
+========================================================
+To build the project, run the following:
+
+make clean
+make [arch]
+
+where [arch] is the architecture to build the kernel on. 
+
+Valid values for [arch] are:
+
+i386
+
+
