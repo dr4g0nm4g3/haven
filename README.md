@@ -1,2 +1,2 @@
 # haven
-old hobby exokernel, c library, and toolchain
+old hobby exokernel (hex), c library (hclib), and toolchain (hcc)
